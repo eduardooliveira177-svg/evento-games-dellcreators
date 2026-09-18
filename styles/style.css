@@ -558,6 +558,14 @@ button:hover {
 
 
 /* Tablets */
+/* ==================================================
+   RESPONSIVIDADE
+================================================== */
+
+
+/* =========================
+   TABLETS
+========================= */
 
 @media (max-width: 900px) {
 
@@ -573,6 +581,14 @@ button:hover {
         gap: 20px;
     }
 
+    .articleIndex {
+        padding: 20px;
+    }
+
+    .articleIndex img {
+        height: 200px;
+    }
+
     .footerConteudo {
         grid-template-columns: 1fr 1fr;
 
@@ -585,9 +601,13 @@ button:hover {
 }
 
 
-/* Celulares */
+/* =========================
+   CELULARES
+========================= */
 
 @media (max-width: 650px) {
+
+    /* HEADER */
 
     header {
         flex-direction: column;
@@ -595,18 +615,26 @@ button:hover {
         gap: 20px;
 
         padding: 25px 15px;
-    }
 
+        text-align: center;
+    }
 
     .tituloNav {
         font-size: 26px;
     }
 
 
-    ul {
-        gap: 5px;
-    }
+    /* NAVEGAÇÃO */
 
+    ul {
+        display: flex;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 8px;
+    }
 
     li a {
         font-size: 15px;
@@ -615,7 +643,9 @@ button:hover {
     }
 
 
-    /* Jogos */
+    /* =========================
+       JOGOS
+    ========================= */
 
     .secaoJogosIndex {
         width: 92%;
@@ -627,33 +657,52 @@ button:hover {
         gap: 20px;
     }
 
+    .tituloJogos {
+        margin-bottom: 0;
+    }
+
+    .tituloJogos mark {
+        padding: 8px 16px;
+
+        font-size: 24px;
+    }
 
     .promocao {
         font-size: 16px;
-    }
 
+        line-height: 1.5;
+    }
 
     .articleIndex {
-        padding: 20px;
-    }
+        width: 100%;
 
+        padding: 20px;
+
+        gap: 12px;
+    }
 
     .articleIndex h2 {
         font-size: 22px;
     }
 
+    .articleIndex h3 {
+        font-size: 17px;
+    }
 
     .articleIndex p {
         font-size: 15px;
-    }
 
+        line-height: 1.5;
+    }
 
     .articleIndex img {
         height: 200px;
     }
 
 
-    /* Sobre */
+    /* =========================
+       SOBRE
+    ========================= */
 
     .secaoSobre {
         width: 92%;
@@ -662,24 +711,61 @@ button:hover {
     }
 
     .articleSobre {
+        width: 100%;
+
+        min-height: auto;
+
         padding: 20px;
     }
 
+    .tituloSobre {
+        font-size: 24px;
+    }
 
-    /* Formulário */
+    .paragrafoSobre {
+        margin: 12px 0;
+
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+
+    /* =========================
+       FORMULÁRIO
+    ========================= */
 
     form {
+        width: 92%;
+
         margin: 60px auto;
+
+        padding: 0;
     }
 
     fieldset {
+        width: 100%;
+
         padding: 20px;
     }
 
+    input,
+    textarea {
+        padding: 13px;
+    }
 
-    /* Footer */
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer {
+        margin-top: 60px;
+    }
 
     .footerConteudo {
+        width: 92%;
+
         grid-template-columns: 1fr;
 
         gap: 30px;
@@ -694,41 +780,183 @@ button:hover {
     .footerMarca p {
         max-width: 100%;
     }
+
+    .footerBottom {
+        padding: 18px 15px;
+    }
 }
 
 
-/* Celulares muito pequenos */
+/* =========================
+   CELULARES PEQUENOS
+========================= */
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
+
+    header {
+        padding: 20px 12px;
+    }
+
+    .tituloNav {
+        font-size: 24px;
+    }
+
+
+    /* Navegação */
 
     ul {
         flex-direction: column;
 
         width: 100%;
-    }
 
+        gap: 5px;
+    }
 
     li {
         width: 100%;
     }
 
-
     li a {
-        text-align: center;
+        width: 100%;
+
+        padding: 9px;
     }
 
+
+    /* Jogos */
+
+    .secaoJogosIndex {
+        width: 94%;
+
+        margin: 30px auto;
+    }
+
+    .tituloJogos mark {
+        font-size: 21px;
+
+        padding: 7px 13px;
+    }
+
+    .promocao {
+        font-size: 14px;
+    }
+
+    .articleIndex {
+        padding: 16px;
+    }
+
+    .articleIndex h2 {
+        font-size: 20px;
+    }
+
+    .articleIndex p {
+        font-size: 14px;
+    }
 
     .articleIndex img {
         height: 180px;
     }
 
 
+    /* Sobre */
+
     .articleSobre {
-        padding: 15px;
+        padding: 16px;
+    }
+
+    .tituloSobre {
+        font-size: 21px;
+    }
+
+    .paragrafoSobre {
+        font-size: 14px;
+
+        line-height: 1.5;
     }
 
 
+    /* Formulário */
+
+    form {
+        width: 94%;
+
+        margin: 40px auto;
+    }
+
     fieldset {
-        padding: 15px;
+        padding: 16px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input,
+    textarea {
+        padding: 12px;
+
+        font-size: 14px;
+    }
+
+    button {
+        padding: 13px;
+
+        font-size: 15px;
+    }
+
+
+    /* Footer */
+
+    .footerConteudo {
+        width: 94%;
+
+        padding: 35px 0;
+    }
+
+    .footerMarca h2 {
+        font-size: 24px;
+    }
+
+    .footerLinks h3,
+    .footerInfo h3 {
+        font-size: 17px;
+    }
+
+    .footerBottom p {
+        font-size: 12px;
+
+        line-height: 1.5;
+    }
+}
+
+
+/* =========================
+   TELAS MUITO PEQUENAS
+========================= */
+
+@media (max-width: 350px) {
+
+    .tituloNav {
+        font-size: 21px;
+    }
+
+    .articleIndex img {
+        height: 160px;
+    }
+
+    .articleIndex h2 {
+        font-size: 18px;
+    }
+
+    .articleIndex p {
+        font-size: 13px;
+    }
+
+    .articleSobre {
+        padding: 13px;
+    }
+
+    fieldset {
+        padding: 13px;
     }
 }
