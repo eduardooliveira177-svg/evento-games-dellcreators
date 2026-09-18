@@ -16,12 +16,15 @@
 
 :root {
     --branco: #fff;
+
     --laranja: #ff7300;
     --laranja-escuro: #cc5c00;
 
     --cinza-escuro: #252525;
     --cinza-card: #303030;
     --cinza-claro: #d8d8d8;
+
+    --cinza-borda: #444;
 
     --preto: #000;
 }
@@ -34,7 +37,10 @@
 body {
     background-color: var(--cinza-escuro);
     color: var(--branco);
+
     min-height: 100vh;
+
+    overflow-x: hidden;
 }
 
 
@@ -50,6 +56,8 @@ header {
     padding: 30px 5%;
 
     background-color: var(--laranja);
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -57,7 +65,9 @@ header {
 
 .tituloNav {
     color: var(--branco);
+
     font-size: 30px;
+    font-weight: bold;
 }
 
 
@@ -70,6 +80,7 @@ ul {
     align-items: center;
 
     list-style: none;
+
     gap: 15px;
 }
 
@@ -102,30 +113,38 @@ li a:hover {
 
 /* =========================
    FORMULÁRIO
-   NÃO ALTERADO ESTRUTURALMENTE
 ========================= */
 
 form {
     display: flex;
     justify-content: center;
 
-    margin: 120px auto;
+    width: 100%;
+
+    margin: 100px auto;
+    padding: 0 20px;
 }
 
 fieldset {
     display: flex;
     flex-direction: column;
 
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
 
     padding: 25px;
 
     border: 2px solid var(--branco);
-    border-radius: 8px;
+    border-radius: 10px;
+
+    background-color: var(--cinza-card);
 }
 
 legend {
+    padding: 0 10px;
+
     color: var(--branco);
+
     font-weight: bold;
     text-align: center;
 }
@@ -133,39 +152,59 @@ legend {
 .inputs {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
     margin: 5px;
 }
 
 label {
-    margin: 10px;
+    margin: 10px 0 6px;
+
     color: var(--branco);
+
+    font-weight: bold;
 }
 
 input,
 textarea {
     width: 100%;
 
-    padding: 15px;
+    padding: 14px;
 
-    border: none;
+    border: 2px solid transparent;
     border-radius: 8px;
 
-    outline-color: var(--laranja);
+    outline: none;
 
-    resize: none;
+    background-color: var(--branco);
+    color: var(--preto);
+
+    transition: border-color 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--laranja);
+}
+
+textarea {
+    min-height: 140px;
+
+    resize: vertical;
 }
 
 ::placeholder {
-    text-align: center;
+    color: #777;
 }
 
+
+/* Botão */
+
 button {
+    width: 100%;
+
     padding: 15px;
 
-    margin-top: 10px;
+    margin-top: 15px;
 
     border: 2px solid var(--branco);
     border-radius: 8px;
@@ -184,56 +223,62 @@ button {
 }
 
 button:hover {
-    transform: scale(1.05);
+    transform: translateY(-2px);
+
     background-color: var(--laranja-escuro);
 }
 
 
 /* =========================
    SOBRE
-   MANTIDO SEPARADO DA INDEX
 ========================= */
 
 .secaoSobre {
     display: flex;
     justify-content: center;
 
-    margin: 120px;
+    width: 90%;
+    max-width: 900px;
+
+    margin: 100px auto;
 }
 
 .articleSobre {
-    width: 400px;
-    height: 500px;
+    width: 100%;
+    max-width: 600px;
 
-    padding: 15px;
+    min-height: 400px;
+
+    padding: 30px;
 
     border: 2px solid var(--laranja);
-    border-radius: 8px;
+    border-radius: 12px;
+
+    background-color: var(--cinza-card);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .tituloSobre {
     color: var(--branco);
+
     text-align: center;
 
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 .paragrafoSobre {
-    color: var(--branco);
+    color: var(--cinza-claro);
 
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    line-height: 1.7;
 
-    margin: 10px;
+    margin: 15px 0;
 }
 
 
-/* ==================================================
-   INDEX — JOGOS
-================================================== */
-
-
 /* =========================
-   CONTAINER DOS JOGOS
+   INDEX — JOGOS
 ========================= */
 
 .secaoJogosIndex {
@@ -244,10 +289,8 @@ button:hover {
 
     display: grid;
 
-    grid-template-columns: repeat(
-        auto-fit,
-        minmax(300px, 1fr)
-    );
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
 
     gap: 30px;
 }
@@ -318,17 +361,13 @@ button:hover {
         border-color 0.25s ease;
 }
 
-
-/* =========================
-   HOVER DO CARD
-========================= */
-
 .articleIndex:hover {
     transform: translateY(-7px);
 
     border-color: var(--branco);
 
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.35);
 }
 
 
@@ -345,7 +384,7 @@ button:hover {
 
 
 /* =========================
-   TÍTULO "OBJETIVO"
+   OBJETIVO
 ========================= */
 
 .articleIndex h3 {
@@ -385,41 +424,12 @@ button:hover {
 
     margin-top: auto;
 
-    transition: transform 0.25s ease;
+    transition:
+        transform 0.25s ease;
 }
-
-
-/* Zoom leve na imagem */
 
 .articleIndex:hover img {
     transform: scale(1.02);
-}
-
-
-/* =========================
-   RESPONSIVIDADE
-========================= */
-
-
-/* Tablets */
-
-@media (max-width: 900px) {
-
-    header {
-        padding: 25px 4%;
-    }
-
-    .secaoJogosIndex {
-        width: 92%;
-
-        grid-template-columns: repeat(
-            2,
-            1fr
-        );
-
-        gap: 20px;
-    }
-
 }
 
 
@@ -435,7 +445,7 @@ button:hover {
 }
 
 
-/* Conteúdo principal */
+/* Conteúdo */
 
 .footerConteudo {
     width: 90%;
@@ -445,6 +455,7 @@ button:hover {
     padding: 50px 0;
 
     display: grid;
+
     grid-template-columns: 2fr 1fr 1fr;
 
     gap: 50px;
@@ -541,25 +552,38 @@ button:hover {
 }
 
 
-/* =========================
+/* ==================================================
    RESPONSIVIDADE
-========================= */
+================================================== */
 
-@media (max-width: 700px) {
+
+/* Tablets */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 25px 4%;
+    }
+
+    .secaoJogosIndex {
+        width: 92%;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
+    }
 
     .footerConteudo {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
 
         gap: 30px;
-
-        padding: 40px 0;
     }
 
-    .footerMarca p {
-        max-width: 100%;
+    .footerMarca {
+        grid-column: 1 / -1;
     }
-
 }
+
 
 /* Celulares */
 
@@ -591,6 +615,8 @@ button:hover {
     }
 
 
+    /* Jogos */
+
     .secaoJogosIndex {
         width: 92%;
 
@@ -599,11 +625,6 @@ button:hover {
         margin: 40px auto;
 
         gap: 20px;
-    }
-
-
-    .tituloJogos {
-        margin-bottom: 0;
     }
 
 
@@ -631,6 +652,48 @@ button:hover {
         height: 200px;
     }
 
+
+    /* Sobre */
+
+    .secaoSobre {
+        width: 92%;
+
+        margin: 60px auto;
+    }
+
+    .articleSobre {
+        padding: 20px;
+    }
+
+
+    /* Formulário */
+
+    form {
+        margin: 60px auto;
+    }
+
+    fieldset {
+        padding: 20px;
+    }
+
+
+    /* Footer */
+
+    .footerConteudo {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding: 40px 0;
+    }
+
+    .footerMarca {
+        grid-column: auto;
+    }
+
+    .footerMarca p {
+        max-width: 100%;
+    }
 }
 
 
@@ -659,4 +722,13 @@ button:hover {
         height: 180px;
     }
 
+
+    .articleSobre {
+        padding: 15px;
+    }
+
+
+    fieldset {
+        padding: 15px;
+    }
 }
