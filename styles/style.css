@@ -1,0 +1,662 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================
+   VARIÁVEIS
+========================= */
+
+:root {
+    --branco: #fff;
+    --laranja: #ff7300;
+    --laranja-escuro: #cc5c00;
+
+    --cinza-escuro: #252525;
+    --cinza-card: #303030;
+    --cinza-claro: #d8d8d8;
+
+    --preto: #000;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    background-color: var(--cinza-escuro);
+    color: var(--branco);
+    min-height: 100vh;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px 5%;
+
+    background-color: var(--laranja);
+}
+
+
+/* Nome DellCreators */
+
+.tituloNav {
+    color: var(--branco);
+    font-size: 30px;
+}
+
+
+/* =========================
+   NAVEGAÇÃO
+========================= */
+
+ul {
+    display: flex;
+    align-items: center;
+
+    list-style: none;
+    gap: 15px;
+}
+
+li a {
+    display: block;
+
+    color: var(--branco);
+    text-decoration: none;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    padding: 10px 14px;
+
+    border-radius: 8px;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+li a:hover {
+    background-color: var(--branco);
+    color: var(--laranja);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   FORMULÁRIO
+   NÃO ALTERADO ESTRUTURALMENTE
+========================= */
+
+form {
+    display: flex;
+    justify-content: center;
+
+    margin: 120px auto;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+
+    width: 400px;
+
+    padding: 25px;
+
+    border: 2px solid var(--branco);
+    border-radius: 8px;
+}
+
+legend {
+    color: var(--branco);
+    font-weight: bold;
+    text-align: center;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 5px;
+}
+
+label {
+    margin: 10px;
+    color: var(--branco);
+}
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+    border-radius: 8px;
+
+    outline-color: var(--laranja);
+
+    resize: none;
+}
+
+::placeholder {
+    text-align: center;
+}
+
+button {
+    padding: 15px;
+
+    margin-top: 10px;
+
+    border: 2px solid var(--branco);
+    border-radius: 8px;
+
+    background-color: var(--laranja);
+    color: var(--branco);
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: var(--laranja-escuro);
+}
+
+
+/* =========================
+   SOBRE
+   MANTIDO SEPARADO DA INDEX
+========================= */
+
+.secaoSobre {
+    display: flex;
+    justify-content: center;
+
+    margin: 120px;
+}
+
+.articleSobre {
+    width: 400px;
+    height: 500px;
+
+    padding: 15px;
+
+    border: 2px solid var(--laranja);
+    border-radius: 8px;
+}
+
+.tituloSobre {
+    color: var(--branco);
+    text-align: center;
+
+    margin-bottom: 5px;
+}
+
+.paragrafoSobre {
+    color: var(--branco);
+
+    letter-spacing: 1px;
+
+    margin: 10px;
+}
+
+
+/* ==================================================
+   INDEX — JOGOS
+================================================== */
+
+
+/* =========================
+   CONTAINER DOS JOGOS
+========================= */
+
+.secaoJogosIndex {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 60px auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(300px, 1fr)
+    );
+
+    gap: 30px;
+}
+
+
+/* =========================
+   TÍTULO "JOGOS"
+========================= */
+
+.tituloJogos {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    margin-bottom: 5px;
+}
+
+.tituloJogos mark {
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    border-radius: 8px;
+
+    background-color: var(--laranja);
+    color: var(--branco);
+}
+
+
+/* =========================
+   PROMOÇÃO
+========================= */
+
+.promocao {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    color: var(--laranja);
+
+    font-size: 18px;
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================
+   CARD DO JOGO
+========================= */
+
+.articleIndex {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+    padding: 25px;
+
+    background-color: var(--cinza-card);
+
+    border: 2px solid var(--laranja);
+    border-radius: 12px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+/* =========================
+   HOVER DO CARD
+========================= */
+
+.articleIndex:hover {
+    transform: translateY(-7px);
+
+    border-color: var(--branco);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================
+   TÍTULO DO JOGO
+========================= */
+
+.articleIndex h2 {
+    color: var(--branco);
+
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+
+/* =========================
+   TÍTULO "OBJETIVO"
+========================= */
+
+.articleIndex h3 {
+    color: var(--laranja);
+
+    font-size: 18px;
+
+    margin-top: 5px;
+}
+
+
+/* =========================
+   DESCRIÇÃO
+========================= */
+
+.articleIndex p {
+    color: var(--cinza-claro);
+
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   IMAGENS DOS JOGOS
+========================= */
+
+.articleIndex img {
+    display: block;
+
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    margin-top: auto;
+
+    transition: transform 0.25s ease;
+}
+
+
+/* Zoom leve na imagem */
+
+.articleIndex:hover img {
+    transform: scale(1.02);
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+
+/* Tablets */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 25px 4%;
+    }
+
+    .secaoJogosIndex {
+        width: 92%;
+
+        grid-template-columns: repeat(
+            2,
+            1fr
+        );
+
+        gap: 20px;
+    }
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    margin-top: 80px;
+
+    background-color: var(--preto);
+    color: var(--branco);
+}
+
+
+/* Conteúdo principal */
+
+.footerConteudo {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 50px 0;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 50px;
+}
+
+
+/* Marca */
+
+.footerMarca h2 {
+    color: var(--laranja);
+
+    font-size: 28px;
+
+    margin-bottom: 15px;
+}
+
+.footerMarca p {
+    color: #ccc;
+
+    max-width: 350px;
+
+    line-height: 1.6;
+}
+
+
+/* Títulos */
+
+.footerLinks h3,
+.footerInfo h3 {
+    color: var(--laranja);
+
+    margin-bottom: 15px;
+}
+
+
+/* Links */
+
+.footerLinks {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.footerLinks a {
+    width: fit-content;
+
+    color: #ccc;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.footerLinks a:hover {
+    color: var(--laranja);
+
+    transform: translateX(5px);
+}
+
+
+/* Informações */
+
+.footerInfo {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.footerInfo p {
+    color: #ccc;
+
+    line-height: 1.5;
+}
+
+
+/* Parte inferior */
+
+.footerBottom {
+    padding: 20px;
+
+    border-top: 1px solid #333;
+
+    text-align: center;
+}
+
+.footerBottom p {
+    color: #999;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 700px) {
+
+    .footerConteudo {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding: 40px 0;
+    }
+
+    .footerMarca p {
+        max-width: 100%;
+    }
+
+}
+
+/* Celulares */
+
+@media (max-width: 650px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 20px;
+
+        padding: 25px 15px;
+    }
+
+
+    .tituloNav {
+        font-size: 26px;
+    }
+
+
+    ul {
+        gap: 5px;
+    }
+
+
+    li a {
+        font-size: 15px;
+
+        padding: 8px 10px;
+    }
+
+
+    .secaoJogosIndex {
+        width: 92%;
+
+        grid-template-columns: 1fr;
+
+        margin: 40px auto;
+
+        gap: 20px;
+    }
+
+
+    .tituloJogos {
+        margin-bottom: 0;
+    }
+
+
+    .promocao {
+        font-size: 16px;
+    }
+
+
+    .articleIndex {
+        padding: 20px;
+    }
+
+
+    .articleIndex h2 {
+        font-size: 22px;
+    }
+
+
+    .articleIndex p {
+        font-size: 15px;
+    }
+
+
+    .articleIndex img {
+        height: 200px;
+    }
+
+}
+
+
+/* Celulares muito pequenos */
+
+@media (max-width: 400px) {
+
+    ul {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+
+    li {
+        width: 100%;
+    }
+
+
+    li a {
+        text-align: center;
+    }
+
+
+    .articleIndex img {
+        height: 180px;
+    }
+
+}

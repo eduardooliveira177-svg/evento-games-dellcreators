@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<!-- Informa ao navegador que estamos utilizando HTML5 -->
+
+<html lang="pt-br">
+<!-- Início do documento HTML e definição do idioma como português do Brasil -->
+
+<head>
+
+    <meta charset="UTF-8">
+    <!-- Permite utilizar caracteres especiais, como ç, ã, é, etc. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faz a página se adaptar à largura da tela do dispositivo -->
+
+    <title>Contato</title>
+    <!-- Define o título que aparece na aba do navegador -->
+
+    <link rel="stylesheet" href="../styles/style.css">
+    <!-- Importa o arquivo CSS que está na pasta "styles" -->
+
+</head>
+
+
+<body>
+<!-- Corpo da página: tudo que será exibido para o usuário fica aqui -->
+
+
+    <!-- =========================
+         CABEÇALHO
+    ========================== -->
+
+    <header>
+        <!-- Cabeçalho principal do site -->
+
+        <h1 class="tituloNav">
+            DellCreators
+        </h1>
+        <!-- Nome do site -->
+
+        <nav>
+            <!-- Área responsável pela navegação entre as páginas -->
+
+            <ul>
+                <!-- Lista contendo os links de navegação -->
+
+                <li>
+                    <a href="index.html">Início</a>
+                </li>
+                <!-- Link para a página inicial -->
+
+                <li>
+                    <a href="sobre.html">Sobre</a>
+                </li>
+                <!-- Link para a página Sobre -->
+
+                <li>
+                    <a href="contatos.html">Contato</a>
+                </li>
+                <!-- Link para a própria página de contato -->
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         CONTEÚDO PRINCIPAL
+    ========================== -->
+
+    <main>
+        <!-- Representa o conteúdo principal da página -->
+
+        <form>
+            <!-- Formulário utilizado para receber os dados do usuário -->
+
+            <fieldset>
+                <!-- Agrupa visualmente os campos relacionados do formulário -->
+
+                <legend>
+                    Formulário de contato
+                </legend>
+                <!-- Título do formulário -->
+
+                <div class="inputs">
+                    <!-- Agrupa os campos de entrada para facilitar a organização com CSS -->
+
+
+                    <label for="nome">
+                        Nome:
+                    </label>
+                    <!-- Texto que identifica o campo de nome -->
+
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite seu nome"
+                        required
+                    >
+                    <!--
+                        Campo para o usuário digitar o nome.
+
+                        type="text" = permite texto
+                        id="nome" = identifica o campo
+                        name="nome" = nome do dado enviado pelo formulário
+                        placeholder = texto de orientação dentro do campo
+                        required = torna o preenchimento obrigatório
+                    -->
+
+
+                    <label for="email">
+                        E-mail:
+                    </label>
+                    <!-- Texto que identifica o campo de e-mail -->
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Digite seu email"
+                        required
+                    >
+                    <!--
+                        Campo para o e-mail.
+
+                        type="email" = informa ao navegador que esperamos um e-mail
+                        id="email" = identifica o campo
+                        name="email" = nome do dado
+                        placeholder = orientação para o usuário
+                        required = preenchimento obrigatório
+                    -->
+
+
+                    <label for="mensagem">
+                        Mensagem:
+                    </label>
+                    <!-- Texto que identifica o campo da mensagem -->
+
+                    <textarea
+                        id="mensagem"
+                        name="mensagem"
+                        placeholder="Digite o que você deseja falar conosco"
+                        required
+                    ></textarea>
+                    <!--
+                        Área maior para o usuário escrever uma mensagem.
+
+                        textarea = campo para textos maiores
+                        id = identificação do elemento
+                        name = nome do dado
+                        placeholder = orientação
+                        required = preenchimento obrigatório
+                    -->
+
+                </div>
+
+
+                <button type="submit">
+                    Enviar mensagem
+                </button>
+                <!--
+                    Botão responsável por enviar o formulário.
+
+                    type="submit" = informa que o botão envia o formulário
+                -->
+
+            </fieldset>
+
+        </form>
+
+    </main>
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================== -->
+
+    <footer class="footer">
+        <!-- Rodapé da página -->
+
+
+        <div class="footerConteudo">
+            <!-- Agrupa as principais informações do rodapé -->
+
+
+            <div class="footerMarca">
+                <!-- Área com o nome e descrição do site -->
+
+                <h2>DellCreators</h2>
+                <!-- Nome do site no rodapé -->
+
+                <p>
+                    Um espaço para conhecer novos mundos,
+                    histórias e jogos.
+                </p>
+                <!-- Pequena descrição do site -->
+
+            </div>
+
+
+            <div class="footerLinks">
+                <!-- Área contendo os links de navegação -->
+
+                <h3>Navegação</h3>
+                <!-- Título da área de navegação -->
+
+                <a href="../index.html">
+                    Início
+                </a>
+                <!-- Link para a página inicial -->
+
+                <a href="sobre.html">
+                    Sobre
+                </a>
+                <!-- Link para a página Sobre -->
+
+                <a href="contatos.html">
+                    Contato
+                </a>
+                <!-- Link para a página de contato -->
+
+            </div>
+
+
+            <div class="footerInfo">
+                <!-- Área com informações sobre o projeto -->
+
+                <h3>Projeto</h3>
+                <!-- Título da seção -->
+
+                <p>
+                    © 2026 DellCreators
+                </p>
+                <!-- Informação de direitos autorais -->
+
+            </div>
+
+        </div>
+
+
+        <div class="footerBottom">
+            <!-- Parte inferior do rodapé -->
+
+            <p>
+                © 2026 DellCreators — Todos os direitos reservados.
+            </p>
+            <!-- Aviso de direitos autorais -->
+
+        </div>
+
+    </footer>
+
+
+</body>
+<!-- Fim do conteúdo visível da página -->
+
+</html>
+<!-- Fim do documento HTML -->
