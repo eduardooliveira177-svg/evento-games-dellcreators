@@ -9,6 +9,11 @@
 :root{
     ---branco: #fff;
     --laranja:#ff7300;
+    --cinza-escuro: #252525;
+}
+
+body{
+    background-color: var(--cinza-escuro);
 }
 
 header{
@@ -43,3 +48,4 @@ li a:hover{
     background-color: var(---branco);
     color: var(--laranja);
 }
+
