@@ -1,62 +1,59 @@
+```html
 <!DOCTYPE html>
-<!-- Informa ao navegador que o documento utiliza HTML5 -->
+<!-- Diz ao navegador que estamos usando a versão HTML5 -->
 
 <html lang="pt-br">
-<!-- Início do documento e definição do idioma como português do Brasil -->
+<!-- Define que o idioma principal da página é português do Brasil -->
 
 <head>
 
     <meta charset="UTF-8">
-    <!-- Permite utilizar caracteres especiais, como ã, ç, é, etc. -->
+    <!-- Permite usar acentos e caracteres especiais normalmente -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Faz a página se adaptar a diferentes tamanhos de tela -->
+    <!-- Faz a página se adaptar ao tamanho da tela, inclusive no celular -->
 
-    <title>Sobre nós</title>
-    <!-- Título que aparece na aba do navegador -->
+    <title>Sobre a DellCreators</title>
+    <!-- Nome que aparece na aba do navegador -->
 
-    <!-- Liga o arquivo CSS à página Sobre -->
     <link rel="stylesheet" href="../styles/style.css">
+    <!-- Conecta esta página com o arquivo de estilos CSS -->
 
 </head>
 
 
 <body>
-<!-- Corpo da página -->
+<!-- Tudo que aparece visualmente na página fica dentro do body -->
 
-
-    <!-- =========================
-         CABEÇALHO
-    ========================== -->
 
     <header>
-        <!-- Cabeçalho principal do site -->
+    <!-- Cabeçalho do site, onde ficam o nome e o menu -->
 
-        <h1 class="tituloNav">
+        <div class="tituloNav">
             DellCreators
-        </h1>
-        <!-- Nome do site -->
+        </div>
+        <!-- Mostra o nome do site no topo da página -->
 
-        <nav>
-            <!-- Área responsável pela navegação entre as páginas -->
+        <nav aria-label="Navegação principal">
+        <!-- Área que reúne os principais links do site -->
 
             <ul>
-                <!-- Lista dos links de navegação -->
+            <!-- Lista usada para organizar os links do menu -->
 
                 <li>
-                    <a href="index.html">Início</a>
+                    <a href="../index.html">Início</a>
                 </li>
-                <!-- Link para a página inicial -->
+                <!-- Leva o usuário para a página inicial -->
 
                 <li>
-                    <a href="sobre.html">Sobre</a>
+                    <a href="sobre.html" aria-current="page">Sobre</a>
                 </li>
-                <!-- Link para a página Sobre -->
+                <!-- Página atual, por isso recebe o aria-current -->
 
                 <li>
                     <a href="contatos.html">Contato</a>
                 </li>
-                <!-- Link para a página de Contato -->
+                <!-- Leva o usuário para a página de contato -->
 
             </ul>
 
@@ -65,24 +62,19 @@
     </header>
 
 
-    <!-- =========================
-         CONTEÚDO PRINCIPAL
-    ========================== -->
-
     <main>
-        <!-- Conteúdo principal da página -->
+    <!-- Aqui fica o conteúdo principal da página -->
 
         <section class="secaoSobre">
-            <!-- Seção que contém as informações sobre a empresa -->
+        <!-- Seção dedicada às informações sobre a DellCreators -->
 
             <article class="articleSobre">
-                <!-- Bloco que reúne o conteúdo sobre a DellCreators -->
-
+            <!-- Reúne o conteúdo e a história da DellCreators -->
 
                 <h1 class="tituloSobre">
                     Sobre nós
                 </h1>
-                <!-- Título da seção -->
+                <!-- Título principal desta página -->
 
 
                 <p class="paragrafoSobre">
@@ -92,7 +84,7 @@
                     em experiências visuais e soluções digitais de alto impacto
                     para marcas que buscam se destacar no mercado.
                 </p>
-                <!-- Primeiro parágrafo apresentando a origem e o propósito da empresa -->
+                <!-- Conta quando a DellCreators foi criada e apresenta seu propósito -->
 
 
                 <p class="paragrafoSobre">
@@ -102,21 +94,25 @@
                     um portfólio completo que integra inovação, performance
                     e identidade de marca.
                 </p>
-                <!-- Segundo parágrafo explicando a evolução da empresa -->
+                <!-- Explica como a empresa começou e como foi evoluindo -->
 
 
-                <p class="paragrafoSobre">
-                    Nossa Missão
-                </p>
-                <!-- Apresenta o título da missão da empresa -->
+                <section class="missao">
+                <!-- Seção separada para apresentar a missão -->
 
+                    <h2>
+                        Nossa missão
+                    </h2>
+                    <!-- Subtítulo que apresenta a missão da DellCreators -->
 
-                <p class="paragrafoSobre">
-                    Impulsionar criadores, startups e empresas consolidadas
-                    por meio de soluções tecnológicas e visuais que geram
-                    conexão real com o público.
-                </p>
-                <!-- Descrição da missão da DellCreators -->
+                    <p class="paragrafoSobre">
+                        Impulsionar criadores, startups e empresas consolidadas
+                        por meio de soluções tecnológicas e visuais que geram
+                        conexão real com o público.
+                    </p>
+                    <!-- Texto que explica o principal objetivo da empresa -->
+
+                </section>
 
             </article>
 
@@ -125,42 +121,37 @@
     </main>
 
 
-    <!-- =========================
-         RODAPÉ
-    ========================== -->
-
     <footer class="footer">
-        <!-- Rodapé da página -->
-
+    <!-- Rodapé com informações e links adicionais -->
 
         <div class="footerConteudo">
-            <!-- Container que organiza o conteúdo principal do rodapé -->
+        <!-- Organiza as diferentes partes do rodapé -->
 
 
-            <div class="footerMarca">
-                <!-- Área com o nome e descrição do site -->
+            <section class="footerMarca">
+            <!-- Apresenta o nome e uma breve descrição do site -->
 
                 <h2>
                     DellCreators
                 </h2>
-                <!-- Nome do site -->
+                <!-- Nome da DellCreators -->
 
                 <p>
                     Um espaço para conhecer novos mundos,
                     histórias e jogos.
                 </p>
-                <!-- Descrição do site -->
+                <!-- Pequena descrição do conteúdo do site -->
 
-            </div>
+            </section>
 
 
-            <div class="footerLinks">
-                <!-- Área responsável pelos links do rodapé -->
+            <nav class="footerLinks" aria-label="Navegação do rodapé">
+            <!-- Menu de navegação que aparece novamente no rodapé -->
 
-                <h3>
+                <h2>
                     Navegação
-                </h3>
-                <!-- Título da área de navegação -->
+                </h2>
+                <!-- Título da área de links -->
 
                 <a href="../index.html">
                     Início
@@ -170,41 +161,41 @@
                 <a href="sobre.html">
                     Sobre
                 </a>
-                <!-- Link para a página Sobre -->
+                <!-- Link para a página sobre -->
 
                 <a href="contatos.html">
                     Contato
                 </a>
-                <!-- Link para a página de Contato -->
+                <!-- Link para a página de contato -->
 
-            </div>
+            </nav>
 
 
-            <div class="footerInfo">
-                <!-- Área com informações sobre o projeto -->
+            <section class="footerInfo">
+            <!-- Área com informações gerais sobre o projeto -->
 
-                <h3>
+                <h2>
                     Projeto
-                </h3>
-                <!-- Título da seção -->
+                </h2>
+                <!-- Título desta parte do rodapé -->
 
                 <p>
                     © 2026 DellCreators
                 </p>
-                <!-- Ano e nome do projeto -->
+                <!-- Mostra o ano e o nome do projeto -->
 
-            </div>
+            </section>
 
         </div>
 
 
         <div class="footerBottom">
-            <!-- Parte inferior do rodapé -->
+        <!-- Parte final do rodapé -->
 
             <p>
                 © 2026 DellCreators — Todos os direitos reservados.
             </p>
-            <!-- Aviso de direitos autorais -->
+            <!-- Aviso de direitos autorais do site -->
 
         </div>
 
@@ -212,7 +203,8 @@
 
 
 </body>
-<!-- Fim do conteúdo da página -->
+<!-- Fim do conteúdo que aparece na página -->
 
 </html>
 <!-- Fim do documento HTML -->
+```
